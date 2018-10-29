@@ -1,0 +1,23 @@
+page-home {
+    #Botones{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #Botones button{
+        flex:1;
+    }
+
+    #Botones ion-icon{
+        font-size: 35px;
+        color: black
+    }
+}
+
+ion-title{
+    text-align: center;
+
+}
+
+
+

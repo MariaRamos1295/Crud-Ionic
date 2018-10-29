@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar> 
+    <ion-title>NOMBRES</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list >
+    <ion-item-sliding *ngFor="let note of notes | async">
+      <ion-item>
+        {{note.note}}
+      </ion-item>
+      <ion-item-options >
+        <button  ion-button color="success" (click)='edit(note)'>
+          <ion-icon name="ios-settings"></ion-icon>
+        </button>
+        <button  ion-button color="danger" (click)='delete(note)'>
+          <ion-icon name="ios-trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <div id="Botones">
+    <button  ion-button full color='danger' (click)="addNote()">
+      <ion-icon name="md-add-circle"></ion-icon>
+    </button>
+    <button  ion-button full color='light' (click)="LogOut()">
+      <ion-icon name="md-log-out"></ion-icon>
+    </button>
+</div>
+</ion-content>
