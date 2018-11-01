@@ -13,19 +13,23 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding id="dayana">
 
-  <ion-item>
-    <ion-label floating >Correo Electronico</ion-label>
-    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
-  </ion-item>
+  <div id="login">
+    <h1>INICIAR SESION</h1>
+    <ion-item>
+      <ion-label floating>Correo Electronico</ion-label>
+      <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
 
-  <ion-item>
+    <ion-item>
       <ion-label floating>Contraseña</ion-label>
       <ion-input type="password" [(ngModel)]="user.password"></ion-input>
-  </ion-item>
+    </ion-item>
+  </div>
 
-  <button ion-button block color= "secondary" (click)="login(user)">Login</button>
-  <button ion-button block color="light" (click)="register()">Register</button>
-
+  <div id="Boton">
+    <button ion-button large color="secondary" (click)="login(user)">Login</button>
+    <button ion-button large color="danger" (click)="register()">Register</button>
+  </div>
 </ion-content>

@@ -14,8 +14,11 @@ import { PrincipalPage } from '../principal/principal';
 export class HomePage {
   username : string;
   noteID: any;
+  //nuestra colleccion de firebase
   noteCollection:AngularFirestoreCollection<any>;
+  //nuestros documentos de firebase, que se encuentra dentro de nuestra colleccion
   noteDoc: AngularFirestoreDocument<any>;
+  //nuestra base de datos o nuestra clase 
   notes: Observable<any>;
   
 
@@ -25,9 +28,9 @@ export class HomePage {
     public navCtrl: NavController,
     public navParams: NavParams
     ) {
-      this.noteCollection=this.db.collection('note');
-      this.notes=this.noteCollection.valueChanges();
-      this.username=this.navParams.get('name');
+      this.noteCollection=this.db.collection('note'); //note es parte de la colleccion de nuestra base de datos
+      this.notes=this.noteCollection.valueChanges(); //nuestra clase notes es parte de note collection
+      this.username=this.navParams.get('name'); //username obtendra lo que el usiario ingresa en el atributo name
       console.log(this.username);
   }
 

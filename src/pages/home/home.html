@@ -4,7 +4,8 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding id="maria">
+  <div class="lista">
   <ion-list >
     <ion-item-sliding *ngFor="let note of notes | async">
       <ion-item>
@@ -20,12 +21,13 @@
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
+</div>
 
   <div id="Botones">
-    <button  ion-button full color='danger' (click)="addNote()">
+    <button  ion-button large color='danger' (click)="addNote()">
       <ion-icon name="md-add-circle"></ion-icon>
     </button>
-    <button  ion-button full color='light' (click)="LogOut()">
+    <button  ion-button large color='light' (click)="LogOut()">
       <ion-icon name="md-log-out"></ion-icon>
     </button>
 </div>

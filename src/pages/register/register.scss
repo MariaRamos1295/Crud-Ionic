@@ -1,7 +1,37 @@
 page-register {
-
+    #Inicio{
+        background-image: url(https://www.sumandovalor.cl/app/webroot/img/content/rubros/13/fondo/org-fondo-madera-negro.jpg)
+    }
 }
 ion-title{
     text-align: center;
 
 }
+
+ion-item{
+    text-align: center;
+    height: 80px;
+}
+
+h1{
+    font-size: 50px;
+    color: aliceblue
+}
+
+div .division{
+    text-align: center;
+    padding: 90px;
+}
+
+#Boton{
+    text-align: center ;
+    margin-top: -10px ;
+    font-size: 50px
+    
+}
+
+#Boton button{
+    flex:1;
+    font-size: 30px
+}
+
